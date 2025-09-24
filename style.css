@@ -32,14 +32,14 @@ h1, h2 {
 }
 
 /* Define a largura máxima do conteúdo */
-.content-wrapper, .form-wrapper, .cta-content, .footer-logos {
+.content-wrapper, .cta-content, .footer-logos {
     max-width: 875px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
 
 .cta-box{
-    display: flex;
+    display: block;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -62,7 +62,7 @@ img {
     background-color: var(--color-light-gray);
     background-image: url('img/texture-1.png');
     background-repeat: repeat;
-    height: 376px;
+    height: 150px;
 }
 
 .hero-banner img {
@@ -72,14 +72,18 @@ img {
 
 .hero-banner .img-left,
 .hero-banner .img-right{
-    margin-bottom: -150px;
+    margin-bottom: -80px;
+}
+
+.hero-banner .img-left{
+    margin-right: -30px;
 }
 
 /*
  * 2º SEÇÃO: CONTEÚDO PRINCIPAL
  */
 .content-section {
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .content-section h1 {
@@ -88,15 +92,15 @@ img {
 }
 
 .content-section h2 {
-    font-size: 26px;
-    line-height: 2rem;
-    margin: 2rem 0 1rem;
+    font-size: 18px;
+    line-height: 1.5rem;
+    margin: 0rem 0 1rem;
     color: var(--color-dark-blue);
 }
 
 .content-section p, .content-section li {
-    font-size: 18px;
-    line-height: 1.5rem;
+    font-size: 14px;
+    line-height: 1.2rem;
     margin-bottom: 1rem;
 }
 
@@ -113,68 +117,6 @@ img {
 .content-section ul li::marker {
     color: var(--color-pink);
     font-weight: 900;
-}
-
-/*
- * 3º SEÇÃO: FORMULÁRIO
- */
-.form-section {
-    background-color: var(--color-pink);
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.form-wrapper form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-wrapper label {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 1.5rem;
-    text-align: left;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-white);
-}
-
-.form-wrapper span {
-    font-weight: 400;
-}
-
-.form-wrapper input, .form-wrapper textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-.form-wrapper textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.form-wrapper button{
-    background-color: var(--color-white);
-    color: var(--color-dark-blue);
-    font-size: 34px;
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: 900;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 99px;
-    cursor: pointer;
-    margin-top: 2rem;
-    transition: background-color 0.3s ease;
-    width: 250px;
-}
-
-.form-wrapper button:hover {
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);  
 }
 
 /*
@@ -199,9 +141,9 @@ img {
 
 .cta-content h3 {
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 3rem;
+    line-height: 2rem;
     margin-bottom: 1.5rem;
     color: var(--color-dark-blue);
     text-align: center;
@@ -212,7 +154,7 @@ img {
     color: var(--color-pink);
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 900;
-    font-size: 36px;
+    font-size: 14px;
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 99px;
@@ -247,16 +189,16 @@ img {
 }
 
 .footer-logos img {
-    max-height: 40px;
+    max-height: 26px;
     width: auto;
 }
 
 /*
- * SEÇÃO: FORM GOOGLE
+ * SEÇÃO: FORM JOTFORM
  */
-.form-section-google {
-    background-color: var(--color-pink);
-    padding: 3rem 1rem;
+.form-section-jotform {
+    /* background-color: var(--color-pink); */
+    padding: 0;
     text-align: center;
 }
 
@@ -264,6 +206,16 @@ img {
  * MEDIA QUERIES PARA RESPONSIVIDADE (DESKTOP)
  */
 @media (min-width: 769px) {
+
+    .hero-banner {
+        height: 316px;
+    }
+
+    .hero-banner .img-left,
+    .hero-banner .img-right{
+        margin-bottom: -150px;
+    }
+
     /* Layout CTA para desktop */
     .cta-section {
         flex-direction: row;
@@ -275,16 +227,59 @@ img {
     .cta-content {
         max-width: 50%;
         text-align: center;
+        font-display: block;
+        align-content: center;
+
     }
 
     .cta-image-wrapper {
         margin-top: -150px;
         width: 100%;
     }
+
+    .cta-content h3 {
+        font-size: 36px;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 23px;
+        padding: 1rem 2.5rem;
+    }
+
+    .cta-box {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+        line-height: 2rem;
+        margin: 2rem 0 1rem;
+        color: var(--color-dark-blue);
+    }
+
+    .content-section p, .content-section li {
+        font-size: 18px;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-section {
+        padding: 4rem 1rem;
+    }
+
+    .footer-logos img {
+        max-height: 40px;
+    }
+
+
 }
 
 @media (min-width: 1200px) {
-    .content-wrapper, .form-wrapper, .cta-content, .footer-logos {
+    .content-wrapper, .cta-content, .footer-logos {
         padding: 2rem 0;
     }
 }
